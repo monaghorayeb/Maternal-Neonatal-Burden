@@ -5,7 +5,7 @@ import plotly.express as px
 st.title("Burden of Maternal and Neonatal Deaths in the World Dashboard")
 
 # Burden in 2021
-graph_url1 = "http://ihmeuw.org/6hmv"
+graph_url1 = "https://ihmeuw.org/6hmv"
 st.markdown(f'<iframe src="{graph_url1}" width="100%" height="600px"></iframe>', unsafe_allow_html=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
