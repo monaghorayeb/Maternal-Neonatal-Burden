@@ -11,7 +11,7 @@ st.markdown(f'<iframe src="{graph_url1}" width="100%" height="600px"></iframe>',
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Barplot 1: Maternal death by region
-data1 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\maternal-deaths-number-by-region.csv")
+data1 = pd.read_csv("maternal-deaths-number-by-region.csv")
 
 regions = ['North America (WB)', 'Europe and Central Asia (WB)', 'Middle East and North Africa (WB)', 'Latin America and Caribbean (WB)', 
            'East Asia and Pacific (WB)', 'South Asia (WB)', 'Sub-Saharan Africa (WB)']
@@ -85,7 +85,7 @@ st.plotly_chart(fig, use_container_width=True)
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Map 1: Number of maternal deaths in the world in 2020
-data2 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\number-of-maternal-deaths.csv")
+data2 = pd.read_csv("number-of-maternal-deaths.csv")
 
 data_2020 = data2[data2['Year'] == 2020]
 
@@ -172,7 +172,7 @@ st.plotly_chart(map_fig1, use_container_width=True)
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data9 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\lifetime-risk-of-maternal-region.csv")
+data9 = pd.read_csv("lifetime-risk-of-maternal-region.csv")
 
 data9['Label'] = '1 in ' + data9['2020'].astype(str)
 
@@ -219,7 +219,7 @@ st.plotly_chart(bar_fig3, use_container_width=True)
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data11 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\causes-of-maternal death.csv")
+data11 = pd.read_csv("causes-of-maternal death.csv")
 
 pie_fig2 = px.pie(
     data11,
@@ -262,7 +262,7 @@ st.plotly_chart(pie_fig2, use_container_width=True)
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Scatter Plot: Relation between Maternal Mortality and GDP
-data4 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\maternal-mortality-ratio-vs-gdp-per-capita.csv")
+data4 = pd.read_csv("maternal-mortality-ratio-vs-gdp-per-capita.csv")
 
 scatter_fig = px.scatter(
     data4,
@@ -334,7 +334,7 @@ st.plotly_chart(scatter_fig, use_container_width=True)
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Pie chart 1: Income level vs Maternal Deaths
-data5 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\maternal-deaths-by-income-group.csv")
+data5 = pd.read_csv("maternal-deaths-by-income-group.csv")
 
 income_groups = ["High-income countries", "Upper-middle-income countries", "Lower-middle-income countries", "Low-income countries"]
 
@@ -381,7 +381,7 @@ pie_fig.update_layout(
 st.plotly_chart(pie_fig, use_container_width=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-data10 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\lifetime-risk-of-maternal-income.csv")
+data10 = pd.read_csv("lifetime-risk-of-maternal-income.csv")
 
 data10['Label'] = '1 in ' + data10['Risk'].astype(str)
 
@@ -428,7 +428,7 @@ st.plotly_chart(bar_fig3, use_container_width=True)
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Boxplot 1: Risk Factors in Maternal Deaths
-data6 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\riskfactors.csv")
+data6 = pd.read_csv("riskfactors.csv")
 
 # Extract the list of columns for comparison with Risk Level
 columns = data6.columns.tolist()
@@ -496,7 +496,7 @@ st.plotly_chart(box_fig, use_container_width=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Figure 2: Share of women visited by Professionals
-data7 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\share-of-mothers-receiving-antenatal-visits.csv")
+data7 = pd.read_csv("share-of-mothers-receiving-antenatal-visits.csv")
 
 filtered_data = data7[data7['Year'] <= 2021]
 
@@ -544,7 +544,7 @@ st.plotly_chart(map_fig2, use_container_width=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data8 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\antenatal-care-4times.csv")
+data8 = pd.read_csv("antenatal-care-4times.csv")
 
 df_melted = data8.melt(id_vars=["Region"], value_vars=["2012", "2022"], var_name="Year", value_name="Percentage")
 
@@ -598,7 +598,7 @@ st.plotly_chart(bar_fig2, use_container_width=True)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data12 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\maternal-mortality-vs-neonatal-mortality.csv")
+data12 = pd.read_csv("maternal-mortality-vs-neonatal-mortality.csv")
 
 data_2020 = data12[data12['Year'] == 2020]
 
@@ -664,7 +664,7 @@ st.plotly_chart(scatter_fig2, use_container_width=True)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data13 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\number-of-neonatal-deaths.csv")
+data13 = pd.read_csv("number-of-neonatal-deaths.csv")
 
 regions = [
     'East Asia and Pacific (UNICEF)', 
@@ -748,7 +748,7 @@ st.plotly_chart(line_fig, use_container_width=True)
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Load the dataset
-data15 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\neonatal-death-causes.csv")
+data15 = pd.read_csv("neonatal-death-causes.csv")
 
 melted_data = data15.melt(id_vars=["Entity"], var_name="Cause", value_name="Count")
 
@@ -807,7 +807,7 @@ st.plotly_chart(bar_fig, use_container_width=True)
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Map 3: Stillbirths in countries
-data11 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\stillbirth-rate.csv")
+data11 = pd.read_csv("stillbirth-rate.csv")
 
 latest_year_data = data11.sort_values(['Entity', 'Year'], ascending=[True, False]).drop_duplicates(subset='Entity', keep='first')
 
@@ -849,11 +849,11 @@ map_fig3.update_layout(
 st.plotly_chart(map_fig3, use_container_width=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-st.image("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\Screenshot 2024-08-03 142425.jpg", caption="Stillbirths and Delivery", use_column_width=True)
+st.image("Screenshot 2024-08-03 142425.jpg", caption="Stillbirths and Delivery", use_column_width=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data14 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\sdg-target-on-child-mortality.csv")
+data14 = pd.read_csv("sdg-target-on-child-mortality.csv")
 
 data_2021 = data14[data14['Year'] == 2021]
 
@@ -904,7 +904,7 @@ st.plotly_chart(map_fig4, use_container_width=True)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-data16 = pd.read_csv("C:\\Users\\Lenovo\\OneDrive - American University of Beirut\\Desktop\\MSBA 350E\\Final Project\\Csv data\\sdg-target-on-maternal-mortality.csv")
+data16 = pd.read_csv("sdg-target-on-maternal-mortality.csv")
 
 data_2020 = data16[data16['Year'] == 2020]
 
